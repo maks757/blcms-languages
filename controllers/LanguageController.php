@@ -53,7 +53,7 @@ class LanguageController extends Controller
         $languages = Language::find()->all();
         $createLanguageForm = new CreateLanguageForm();
 
-        return $this->render('index', [
+        return $this->render('list', [
             'languages' => $languages,
             'createLanguageForm' => $createLanguageForm
         ]);

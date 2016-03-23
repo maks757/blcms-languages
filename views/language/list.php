@@ -15,7 +15,7 @@ $this->title = 'Languages';
             <div class="ibox-title">
                 <h5>
                     <i class="fa fa-language"></i>
-                    Список языков
+                    Languages list
                 </h5>
             </div>
             <div class="ibox-content">
@@ -71,7 +71,7 @@ $this->title = 'Languages';
                         <? else: ?>
                             <tr>
                                 <td colspan="4">
-                                    У Вас пока нету языков
+                                    There is no languages found
                                 </td>
                             </tr>
                         <? endif; ?>
@@ -81,7 +81,7 @@ $this->title = 'Languages';
             </div>
             <div class="ibox-footer">
                 <a class="btn btn-primary pull-right" data-toggle="modal" data-target="#addLanguagePopup">
-                    <i class="fa fa-user-plus"></i> Добавить
+                    <i class="fa fa-user-plus"></i> Add
                 </a>
                 <div class="clearfix"></div>
             </div>
