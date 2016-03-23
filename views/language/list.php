@@ -39,27 +39,27 @@ $this->title = 'Languages';
                                     <td class="text-center">
                                         <a href="<?= Url::to(['language/switch-active', 'id' => $lang->id]) ?>">
                                             <? if ($lang->active > 0): ?>
-                                                <i class="fa fa-check text-success"></i>
+                                                <i class="glyphicon glyphicon-ok text-success"></i>
                                             <? else: ?>
-                                                <i class="fa fa-minus text-danger"></i>
+                                                <i class="glyphicon glyphicon-remove text-danger"></i>
                                             <? endif; ?>
                                         </a>
                                     </td>
                                     <td class="text-center">
                                         <a href="<?= Url::to(['language/switch-show', 'id' => $lang->id]) ?>">
                                             <? if ($lang->show > 0): ?>
-                                                <i class="fa fa-check text-success"></i>
+                                                <i class="glyphicon glyphicon-ok text-success"></i>
                                             <? else: ?>
-                                                <i class="fa fa-minus text-danger"></i>
+                                                <i class="glyphicon glyphicon-remove text-danger"></i>
                                             <? endif; ?>
                                         </a>
                                     </td>
                                     <td class="text-center">
                                         <a href="<?= Url::to(['language/switch-default', 'id' => $lang->id]) ?>">
                                             <? if ($lang->default > 0): ?>
-                                                <i class="fa fa-check text-success"></i>
+                                                <i class="glyphicon glyphicon-ok text-success"></i>
                                             <? else: ?>
-                                                <i class="fa fa-minus text-danger"></i>
+                                                <i class="glyphicon glyphicon-remove text-danger"></i>
                                             <? endif; ?>
                                         </a>
                                     </td>
