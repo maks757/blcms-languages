@@ -118,7 +118,7 @@ class LanguageController extends Controller
                     $defaultLanguage->save();
                 }
 
-                $language->default = true;;
+                $language->default = true;
                 $language->save();
             }
             else {
