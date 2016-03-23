@@ -27,11 +27,11 @@ class CreateLanguageForm extends Model
         return [
             ['name', 'filter', 'filter' => 'trim'],
             ['name', 'required'],
-            ['name', 'unique', 'targetClass' => '\common\entities\Language', 'message' => 'This name has already been taken.'],
+            ['name', 'unique', 'targetClass' => '\bl\multilang\entities\Language', 'message' => 'This name has already been taken.'],
 
             ['lang_id', 'filter', 'filter' => 'trim'],
             ['lang_id', 'required'],
-            ['lang_id', 'unique', 'targetClass' => '\common\entities\Language', 'message' => 'This code has already been taken.'],
+            ['lang_id', 'unique', 'targetClass' => '\bl\multilang\entities\Language', 'message' => 'This code has already been taken.'],
 
             [['active', 'show'], 'boolean']
         ];

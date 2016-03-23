@@ -65,7 +65,7 @@ class LanguageController extends Controller
         if($formModel->load(\Yii::$app->request->post())) {
             try {
                 $formModel->create();
-                $this->redirect(['settings/index']);
+                $this->redirect(['/languages']);
             }
             catch(RuntimeException $ex) {
                 return $this->render('/site/error', [
@@ -84,7 +84,7 @@ class LanguageController extends Controller
     public function actionDelete() {
         $id = \Yii::$app->request->get('id');
         if(Language::deleteAll(['id' => $id])) {
-            $this->redirect(['/settings']);
+            $this->redirect(['/languages']);
         }
         else {
             return $this->render('/site/error', [
@@ -107,7 +107,25 @@ class LanguageController extends Controller
                 ]);
             }
         }
-        $this->redirect(['/settings']);
+        $this->redirect(['/languages']);
+    }
+
+    public function actionSwitchDefault($id) {
+        if(!empty($id)) {
+            if($language = Language::findOne($id)) {
+                if($defaultLanguage = Language::findOne(['default' => true])) {
+                    $defaultLanguage->default = false;
+                    $defaultLanguage->save();
+                }
+
+                $language->default = true;;
+                $language->save();
+            }
+            else {
+                // TODO: render error
+            }
+        }
+        $this->redirect(['/languages']);
     }
 
     public function actionSwitchShow() {
@@ -128,6 +146,6 @@ class LanguageController extends Controller
                 return $this->render('/site/error', ['message' => 'Error', 'errors' => 'Language is not found']);
             }
         }
-        $this->redirect(['/settings']);
+        $this->redirect(['/languages']);
     }
 }
