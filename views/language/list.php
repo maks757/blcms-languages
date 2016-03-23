@@ -108,7 +108,7 @@ $this->title = 'Languages';
                         'inputOptions' => [
                             'class' => 'form-control'
                         ]
-                    ])->label('name')
+                    ])->label('Name')
                     ?>
                 </div>
                 <div class="form-group">
