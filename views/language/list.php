@@ -100,7 +100,7 @@ $this->title = 'Languages';
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title"><i class="fa fa-user-plus"></i> Добавить пользователя</h4>
+                <h4 class="modal-title"><i class="fa fa-user-plus"></i> Add new language</h4>
             </div>
             <div class="modal-body">
                 <div class="form-group">
@@ -108,7 +108,7 @@ $this->title = 'Languages';
                         'inputOptions' => [
                             'class' => 'form-control'
                         ]
-                    ])->label('Название языка')
+                    ])->label('name')
                     ?>
                 </div>
                 <div class="form-group">
@@ -116,7 +116,7 @@ $this->title = 'Languages';
                         'inputOptions' => [
                             'class' => 'form-control'
                         ]
-                    ])->label('Код языка')
+                    ])->label('Code')
                     ?>
                 </div>
                 <?= Html::activeCheckbox($createLanguageForm, 'active') ?>
@@ -124,7 +124,7 @@ $this->title = 'Languages';
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <input type="submit" class="btn btn-primary pull-right" value="Добавить">
+                <input type="submit" class="btn btn-primary pull-right" value="Add">
             </div>
             <? ActiveForm::end(); ?>
         </div>

@@ -21,7 +21,6 @@ class CreateLanguageForm extends Model
     public $lang_id;
     public $active;
     public $show;
-    public $default;
 
     public function rules()
     {
@@ -34,7 +33,7 @@ class CreateLanguageForm extends Model
             ['lang_id', 'required'],
             ['lang_id', 'unique', 'targetClass' => '\common\entities\Language', 'message' => 'This code has already been taken.'],
 
-            [['active', 'show', 'default'], 'boolean']
+            [['active', 'show'], 'boolean']
         ];
     }
 
@@ -46,7 +45,6 @@ class CreateLanguageForm extends Model
             $language->lang_id = $this->lang_id;
             $language->active = $this->active;
             $language->show = $this->show;
-            $language->default = $this->default;
 
             if($language->save()) {
                 return true;
