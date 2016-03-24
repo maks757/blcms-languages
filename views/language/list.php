@@ -11,14 +11,14 @@ $this->title = 'Languages';
 <!-- LANGUAGES -->
 <div class="row">
     <div class="col-lg-12">
-        <div class="ibox float-e-margins">
-            <div class="ibox-title">
+        <div class="panel panel-default">
+            <div class="panel-heading">
                 <h5>
-                    <i class="fa fa-language"></i>
+                    <i class="glyphicon glyphicon-globe"></i>
                     Languages list
                 </h5>
             </div>
-            <div class="ibox-content">
+            <div class="panel-body">
                 <div class="table-responsive">
                     <table class="table table-hover">
                         <thead>
@@ -64,7 +64,7 @@ $this->title = 'Languages';
                                         </a>
                                     </td>
                                     <td class="text-center">
-                                        <a href="<?=Url::to(['language/delete', 'id' => $lang->id])?>" class="fa fa-times text-danger"></a>
+                                        <a href="<?=Url::to(['language/delete', 'id' => $lang->id])?>" class="glyphicon glyphicon-remove text-danger"></a>
                                     </td>
                                 </tr>
                             <? endforeach; ?>
@@ -79,9 +79,9 @@ $this->title = 'Languages';
                     </table>
                 </div>
             </div>
-            <div class="ibox-footer">
+            <div class="panel-footer">
                 <a class="btn btn-primary pull-right" data-toggle="modal" data-target="#addLanguagePopup">
-                    <i class="fa fa-user-plus"></i> Add
+                    <i class="glyphicon glyphicon-plus"></i> Add
                 </a>
                 <div class="clearfix"></div>
             </div>
@@ -100,7 +100,7 @@ $this->title = 'Languages';
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title"><i class="fa fa-user-plus"></i> Add new language</h4>
+                <h4 class="modal-title"><i class="glyphicon glyphicon-user"></i> Add new language</h4>
             </div>
             <div class="modal-body">
                 <div class="form-group">
