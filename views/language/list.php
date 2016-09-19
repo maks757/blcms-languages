@@ -31,50 +31,50 @@ $this->title = 'Languages';
                         </tr>
                         </thead>
                         <tbody>
-                        <? if(!empty($languages)): ?>
-                            <? foreach ($languages as $lang): ?>
+                        <?php if(!empty($languages)): ?>
+                            <?php foreach ($languages as $lang): ?>
                                 <tr>
                                     <td><?= $lang->name ?></td>
                                     <td><?= $lang->lang_id ?></td>
                                     <td class="text-center">
                                         <a href="<?= Url::to(['language/switch-active', 'id' => $lang->id]) ?>">
-                                            <? if ($lang->active > 0): ?>
+                                            <?php if ($lang->active > 0): ?>
                                                 <i class="glyphicon glyphicon-ok text-success"></i>
-                                            <? else: ?>
+                                            <?php else: ?>
                                                 <i class="glyphicon glyphicon-remove text-danger"></i>
-                                            <? endif; ?>
+                                            <?php endif; ?>
                                         </a>
                                     </td>
                                     <td class="text-center">
                                         <a href="<?= Url::to(['language/switch-show', 'id' => $lang->id]) ?>">
-                                            <? if ($lang->show > 0): ?>
+                                            <?php if ($lang->show > 0): ?>
                                                 <i class="glyphicon glyphicon-ok text-success"></i>
-                                            <? else: ?>
+                                            <?php else: ?>
                                                 <i class="glyphicon glyphicon-remove text-danger"></i>
-                                            <? endif; ?>
+                                            <?php endif; ?>
                                         </a>
                                     </td>
                                     <td class="text-center">
                                         <a href="<?= Url::to(['language/switch-default', 'id' => $lang->id]) ?>">
-                                            <? if ($lang->default > 0): ?>
+                                            <?php if ($lang->default > 0): ?>
                                                 <i class="glyphicon glyphicon-ok text-success"></i>
-                                            <? else: ?>
+                                            <?php else: ?>
                                                 <i class="glyphicon glyphicon-remove text-danger"></i>
-                                            <? endif; ?>
+                                            <?php endif; ?>
                                         </a>
                                     </td>
                                     <td class="text-center">
                                         <a href="<?=Url::to(['language/delete', 'id' => $lang->id])?>" class="glyphicon glyphicon-remove text-danger"></a>
                                     </td>
                                 </tr>
-                            <? endforeach; ?>
-                        <? else: ?>
+                            <?php endforeach; ?>
+                        <?php else: ?>
                             <tr>
                                 <td colspan="4">
                                     There is no languages found
                                 </td>
                             </tr>
-                        <? endif; ?>
+                        <?php endif; ?>
                         </tbody>
                     </table>
                 </div>
@@ -95,7 +95,7 @@ $this->title = 'Languages';
 <div class="modal fade" id="addLanguagePopup" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <? $createLangForm = ActiveForm::begin(['action' => Url::to(['language/create']), 'method' => 'post']) ?>
+            <?php $createLangForm = ActiveForm::begin(['action' => Url::to(['language/create']), 'method' => 'post']) ?>
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -126,7 +126,7 @@ $this->title = 'Languages';
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <input type="submit" class="btn btn-primary pull-right" value="Add">
             </div>
-            <? ActiveForm::end(); ?>
+            <?php ActiveForm::end(); ?>
         </div>
     </div>
 </div>
