@@ -8,4 +8,8 @@ namespace bl\cms\language;
 class Module extends \yii\base\Module
 {
     public $defaultRoute = 'language';
+    public function init()
+    {
+        parent::init();
+    }
 }

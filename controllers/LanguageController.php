@@ -6,48 +6,57 @@ use bl\multilang\entities\Language;
 use RuntimeException;
 use yii\base\InvalidParamException;
 use yii\web\Controller;
+use yii\filters\AccessControl;
 
 /**
  * @author Gutsulyak Vadim <guts.vadim@gmail.com>
  */
 class LanguageController extends Controller
 {
-    /*public function behaviors()
+    /**
+     * @inheritdoc
+     */
+    public function behaviors()
     {
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => [
-                    'create',
-                    'delete',
-                    'switch-active',
-                    'switch-show'
-                ],
                 'rules' => [
                     [
+                        'actions' => ['index'],
+                        'roles' => ['viewLanguages'],
                         'allow' => true,
+                    ],
+                    [
                         'actions' => ['create'],
-                        'roles' => ['createLanguage']
+                        'roles' => ['createLanguage'],
+                        'allow' => true,
                     ],
                     [
-                        'allow' => true,
                         'actions' => ['delete'],
-                        'roles' => ['showLanguage']
+                        'roles' => ['deleteLanguage'],
+                        'allow' => true,
                     ],
                     [
-                        'allow' => true,
                         'actions' => ['switch-active'],
-                        'roles' => ['activeLanguage']
+                        'roles' => ['editLanguage'],
+                        'allow' => true,
                     ],
                     [
+                        'actions' => ['switch-default'],
+                        'roles' => ['editLanguage'],
                         'allow' => true,
+                    ],
+                    [
                         'actions' => ['switch-show'],
-                        'roles' => ['showLanguage']
+                        'roles' => ['editLanguage'],
+                        'allow' => true,
                     ],
                 ],
-            ],
+            ]
         ];
-    }*/
+    }
+
 
     public function actionIndex() {
         $languages = Language::find()->all();
