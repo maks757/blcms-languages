@@ -1,8 +1,8 @@
 <?php
-namespace bl\cms\language\controllers;
+namespace maks757\language\controllers;
 
-use bl\cms\language\models\form\CreateLanguageForm;
-use bl\multilang\entities\Language;
+use maks757\language\models\form\CreateLanguageForm;
+use maks757\multilang\entities\Language;
 use RuntimeException;
 use yii\base\InvalidParamException;
 use yii\web\Controller;

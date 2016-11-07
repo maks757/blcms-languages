@@ -1,6 +1,6 @@
 <?php
 
-namespace bl\cms\language;
+namespace maks757\language;
 
 /**
  * @author Gutsulyak Vadim <guts.vadim@gmail.com>

@@ -6,9 +6,9 @@
  * Time: 1:22
  */
 
-namespace bl\cms\language\models\form;
+namespace maks757\language\models\form;
 
-use bl\multilang\entities\Language;
+use maks757\multilang\entities\Language;
 use RuntimeException;
 use yii\base\InvalidParamException;
 use yii\base\Model;
@@ -27,11 +27,11 @@ class CreateLanguageForm extends Model
         return [
             ['name', 'filter', 'filter' => 'trim'],
             ['name', 'required'],
-            ['name', 'unique', 'targetClass' => '\bl\multilang\entities\Language', 'message' => 'This name has already been taken.'],
+            ['name', 'unique', 'targetClass' => '\maks757\multilang\entities\Language', 'message' => 'This name has already been taken.'],
 
             ['lang_id', 'filter', 'filter' => 'trim'],
             ['lang_id', 'required'],
-            ['lang_id', 'unique', 'targetClass' => '\bl\multilang\entities\Language', 'message' => 'This code has already been taken.'],
+            ['lang_id', 'unique', 'targetClass' => '\maks757\multilang\entities\Language', 'message' => 'This code has already been taken.'],
 
             [['active', 'show'], 'boolean']
         ];
