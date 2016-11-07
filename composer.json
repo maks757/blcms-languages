@@ -11,7 +11,7 @@
   ],
   "require": {
     "yiisoft/yii2": ">=2.0.4",
-    "black-lamp/yii2-multi-lang": "*"
+    "maks757/yii2-multi-lang": "*"
   },
   "autoload": {
     "psr-4": {
