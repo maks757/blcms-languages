@@ -1,12 +1,12 @@
 {
-  "name": "black-lamp/blcms-languages",
-  "description": "Black-Lamp CMS languages module.",
-  "keywords": ["black-lamp", "cms", "languages"],
+  "name": "maks757/languages",
+  "description": "Languages module.",
+  "keywords": ["languages"],
   "type": "yii2-extension",
   "authors": [
     {
-      "name": "Gutsulyak Vadim",
-      "email": "guts.vadim@gmail.com"
+      "name": "Max Cherednyk",
+      "email": "maks757q@gmail.com"
     }
   ],
   "require": {
@@ -15,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "bl\\cms\\language\\": ""
+      "maks757\\language\\": ""
     }
   }
 }
