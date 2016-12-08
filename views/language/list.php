@@ -125,7 +125,7 @@ $this->title = Module::t('Languages');
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal"><?= Module::t('Close') ?></button>
-                <input type="submit" class="btn btn-primary pull-right" value="Add">
+                <input type="submit" class="btn btn-primary pull-right" value="<?= Module::t('Add') ?>">
             </div>
             <?php ActiveForm::end(); ?>
         </div>
