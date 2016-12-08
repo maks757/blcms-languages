@@ -1,10 +1,11 @@
 <?php
 
+use maks757\language\Module;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 
-$this->title = 'Languages';
+$this->title = Module::t('Languages');
 
 ?>
 
@@ -15,7 +16,7 @@ $this->title = 'Languages';
             <div class="panel-heading">
                 <h5>
                     <i class="glyphicon glyphicon-globe"></i>
-                    Languages list
+                    <?= Module::t('Languages list') ?>
                 </h5>
             </div>
             <div class="panel-body">
@@ -23,11 +24,11 @@ $this->title = 'Languages';
                     <table class="table table-hover">
                         <thead>
                         <tr>
-                            <th>Language</th>
-                            <th>Code</th>
-                            <th class="text-center">Active</th>
-                            <th class="text-center">Show</th>
-                            <th class="text-center">Default</th>
+                            <th><?= Module::t('Language') ?></th>
+                            <th><?= Module::t('Code') ?></th>
+                            <th class="text-center"><?= Module::t('Active') ?></th>
+                            <th class="text-center"><?= Module::t('Show') ?></th>
+                            <th class="text-center"><?= Module::t('Default') ?></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -71,7 +72,7 @@ $this->title = 'Languages';
                         <?php else: ?>
                             <tr>
                                 <td colspan="4">
-                                    There is no languages found
+                                    <?= Module::t('There no found languages') ?>
                                 </td>
                             </tr>
                         <?php endif; ?>
@@ -81,7 +82,7 @@ $this->title = 'Languages';
             </div>
             <div class="panel-footer">
                 <a class="btn btn-primary pull-right" data-toggle="modal" data-target="#addLanguagePopup">
-                    <i class="glyphicon glyphicon-plus"></i> Add
+                    <i class="glyphicon glyphicon-plus"></i> <?= Module::t('Add') ?>
                 </a>
                 <div class="clearfix"></div>
             </div>
@@ -100,7 +101,7 @@ $this->title = 'Languages';
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title"><i class="glyphicon glyphicon-user"></i> Add new language</h4>
+                <h4 class="modal-title"><i class="glyphicon glyphicon-user"></i><?= Module::t('Add new language') ?></h4>
             </div>
             <div class="modal-body">
                 <div class="form-group">
@@ -108,7 +109,7 @@ $this->title = 'Languages';
                         'inputOptions' => [
                             'class' => 'form-control'
                         ]
-                    ])->label('Name')
+                    ])->label(Module::t('Name'))
                     ?>
                 </div>
                 <div class="form-group">
@@ -116,14 +117,14 @@ $this->title = 'Languages';
                         'inputOptions' => [
                             'class' => 'form-control'
                         ]
-                    ])->label('Code')
+                    ])->label(Module::t('Code'))
                     ?>
                 </div>
-                <?= Html::activeCheckbox($createLanguageForm, 'active') ?>
-                <?= Html::activeCheckbox($createLanguageForm, 'show') ?>
+                <?= Html::activeCheckbox($createLanguageForm, 'active', ['label' => Module::t('Active')]) ?>
+                <?= Html::activeCheckbox($createLanguageForm, 'show', ['label' => Module::t('Show')]) ?>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal"><?= Module::t('Close') ?></button>
                 <input type="submit" class="btn btn-primary pull-right" value="Add">
             </div>
             <?php ActiveForm::end(); ?>
