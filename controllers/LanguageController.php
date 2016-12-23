@@ -13,49 +13,49 @@ use yii\filters\AccessControl;
  */
 class LanguageController extends Controller
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'rules' => [
-                    [
-                        'actions' => ['index'],
-                        'roles' => ['viewLanguages'],
-                        'allow' => true,
-                    ],
-                    [
-                        'actions' => ['create'],
-                        'roles' => ['createLanguage'],
-                        'allow' => true,
-                    ],
-                    [
-                        'actions' => ['delete'],
-                        'roles' => ['deleteLanguage'],
-                        'allow' => true,
-                    ],
-                    [
-                        'actions' => ['switch-active'],
-                        'roles' => ['editLanguage'],
-                        'allow' => true,
-                    ],
-                    [
-                        'actions' => ['switch-default'],
-                        'roles' => ['editLanguage'],
-                        'allow' => true,
-                    ],
-                    [
-                        'actions' => ['switch-show'],
-                        'roles' => ['editLanguage'],
-                        'allow' => true,
-                    ],
-                ],
-            ]
-        ];
-    }
+//    /**
+//     * @inheritdoc
+//     */
+//    public function behaviors()
+//    {
+//        return [
+//            'access' => [
+//                'class' => AccessControl::className(),
+//                'rules' => [
+//                    [
+//                        'actions' => ['index'],
+//                        'roles' => ['viewLanguages'],
+//                        'allow' => true,
+//                    ],
+//                    [
+//                        'actions' => ['create'],
+//                        'roles' => ['createLanguage'],
+//                        'allow' => true,
+//                    ],
+//                    [
+//                        'actions' => ['delete'],
+//                        'roles' => ['deleteLanguage'],
+//                        'allow' => true,
+//                    ],
+//                    [
+//                        'actions' => ['switch-active'],
+//                        'roles' => ['editLanguage'],
+//                        'allow' => true,
+//                    ],
+//                    [
+//                        'actions' => ['switch-default'],
+//                        'roles' => ['editLanguage'],
+//                        'allow' => true,
+//                    ],
+//                    [
+//                        'actions' => ['switch-show'],
+//                        'roles' => ['editLanguage'],
+//                        'allow' => true,
+//                    ],
+//                ],
+//            ]
+//        ];
+//    }
 
 
     public function actionIndex() {
